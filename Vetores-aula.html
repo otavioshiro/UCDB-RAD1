@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+            <script>
+
+                    function inserindoValor(){
+                          
+                        var array = new Array();
+                        var entrada = Number(document.getElementById("numero").value);
+                        var numberMax = Number(document.getElementById("maximo").value);
+                            
+                            // var n1 = Number( document.getElementById("n1").value) ;
+                            // var n2 = Number( document.getElementById("n2").value) ;
+                            // var n3 = Number(document.getElementById("n3").value) ;
+
+                            // var eleResultado = document.getElementById("resultado") ;
+                           
+                            // var maior=0;
+
+                            // if (n1>n2 && n1>n3){
+                            //     maior = n1;
+                            // }else if (n2>n1 && n2>n3 ){
+                            //     maior = n2;
+                            // }else {
+                            //     maior =n3;
+                            // }
+                            
+
+                            numberMax.innerHTML= "<b>"+entrada+"</b>";
+
+                    }
+                    
+                    //Declarando 
+                    // var array = new Array();
+                    // var entrada = Number(document.getElementById("numero").value);
+                    
+                    //Adicionando itens no array
+                    // array.push("10");   //0
+                    // array.push("20");   //1
+                    // array.push("30");   //2
+
+                    for(i=0; i<10; i++){
+                        array.push("numero");
+                    }
+
+                    function maioNumero(){
+                        for(i=0; i<10; i++){
+                            if (array[i]>array[i+1]){
+                                array[10] = array[i];
+                            }
+                            else{
+                                for (i=0; i<10;i++){
+                                    console.log(array[i]);
+                                }
+                            }
+                        }
+                    }
+
+            </script>
+    </head>
+
+    <body>
+            <!--<label>N1:</label>
+            <input id="n1">
+
+            <label>N2:</label>
+            <input id="n2">
+
+            <label>N3:</label>
+            <input id="n3">-->
+
+            <label>Max value</label>
+
+            <div id="resultado"> </div>
+            <input type="number" value="" id="numero">
+            <input type="button" value="Insert in" onclick="inserindoValor()"/>
+            <input type="button" value="MAX equals" onclick="maioNumero()"/>
+
+    </body>
+</html>

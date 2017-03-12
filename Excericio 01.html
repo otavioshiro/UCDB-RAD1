@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<title> Exercício 1 - trocar valores de campos </title>
+		
+		<script>
+			
+			
+			function trocar(){
+				var aux = document.getElementById("C1").value;
+				C1.value = document.getElementById("C2").value;
+				C2.value = aux;
+			}
+
+			
+		</script>
+	</head>
+	
+	<body>
+		<form>
+		
+			<label id="variavel1"> C1 </label>
+			<input type="text" value="" name="C1" id="C1">
+			
+			<label id="variavel1"> C2 </label>
+			<input type="text" value="" name="C2" id="C2">
+			
+			<input type="button" onclick="trocar()" value="Trocar campos"/>
+			
+		</form>
+	</body>
+
+</html>

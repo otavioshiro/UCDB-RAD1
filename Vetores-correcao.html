@@ -1,0 +1,74 @@
+<html>
+
+    <head>
+            <script>
+
+                   function maior(){
+
+                        var n1 = Number (document.getElementById("numero1").value);
+                        var n2 = Number (document.getElementById("numero2").value);
+                        var n3 = Number (document.getElementById("numero3").value);
+                        var n4 = Number (document.getElementById("numero4").value);
+                        var n5 = Number (document.getElementById("numero5").value);
+                        var n6 = Number (document.getElementById("numero6").value);
+                        var n7 = Number (document.getElementById("numero7").value);
+                        var n8 = Number (document.getElementById("numero8").value);
+                        var n9 = Number (document.getElementById("numero9").value);
+                        var n10 = Number (document.getElementById("numero10").value);
+
+                        var vetor = [n1,n2,n3,n4,n5,n6,n7,n8,n9,n10];
+                        var maior = vetor[0];
+
+                        for (i = 1; i < vetor.length; i++){
+                            if (vetor[i] > maior){
+                                maior = vetor[i];
+                            }
+                        }
+console.log(maior);
+                        var saida = document.getElementById("saida");
+                        saida.innerHTML = "o maior = "+maior;
+
+                   }
+
+            </script>
+    </head>
+
+    <body>
+
+        <label>Numero 1</label>
+        <br><input type="number" value="" id="numero1">
+
+        <label>Numero 2</label><br>
+        <input type="number" value="" id="numero2">
+
+        <label>Numero 3</label><br>
+        <input type="number" value="" id="numero3">
+
+        <label>Numero 4</label><br>
+        <input type="number" value="" id="numero4">
+
+        <label>Numero 5</label><br>
+        <input type="number" value="" id="numero5">
+
+        <label>Numero 6</label><br>
+        <input type="number" value="" id="numero6">
+
+        <label>Numero 7</label><br>
+        <input type="number" value="" id="numero7">
+
+        <label>Numero 8</label><br>
+        <input type="number" value="" id="numero8">
+
+        <label>Numero 9</label><br>
+        <input type="number" value="" id="numero9">
+
+        <label>Numero 10</label>
+        <input type="number" value="" id="numero10">
+
+        <label>Saida</label>
+        <span id="saida"></span>
+
+        <br><input type="button" value="Maior" onclick="maior()">
+
+    </body>
+</html>

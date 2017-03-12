@@ -1,0 +1,38 @@
+<html>
+
+	<head> 
+	
+		<title>Troca de imagens</title>
+	
+		<script>
+			
+			function trocar01(){
+				document.getElementById("imagem").src="http://media.comicbook.com/2016/07/saw-190205.jpg"
+			}
+			
+			function trocar02(){
+				document.getElementById("imagem").src="https://cinemaplanet.pt/wp-content/uploads/2016/03/Annabelle-after-credits-hq.jpg"
+			}
+			
+			function trocar03(){
+				document.getElementById("imagem").src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRg-M8EDoTp8wBAt1Qd29Uo2-v76hnu1suq7j4L4QDElrp1gt-M"
+			}
+			
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<form>
+		
+			<img id="imagem" src=""/>
+			
+			<input type="button" onclick="trocar01()" value="Trocar campos"/>
+			<input type="button" onclick="trocar02()" value="Trocar campos"/>
+			<input type="button" onclick="trocar03()" value="Trocar campos"/>
+			
+		</form>
+	</body>
+	
+</html>

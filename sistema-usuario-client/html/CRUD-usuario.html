@@ -1,0 +1,81 @@
+<html>
+
+    <head>
+
+     
+    </head>
+    <body>
+        <p id="contador"></p>
+        <table>
+                <tr>
+                
+                </tr>
+                <tbody id="usuarios">
+
+                </tbody>    
+        </table>
+
+    </body>
+
+
+       <script>
+            //instancia de uma classe Anonima
+               var app= new function(){
+                    console.log("Instancinado app 2");
+                    this.elUsuarios = document.getElementById("usuarios");
+                    this.usuarios=['Jão','Zé','Maria'];
+                    this.contar = function (qtd){
+                        var elContador = document.getElementById("contador");
+                        var nome="Usuario";
+                        if (qtd){
+                            if (qtd>1){
+                                nome="Usuários";
+                            }
+                           elContador.innerHTML=qtd + ' '+ nome;
+                            
+                        }else {
+                            elContador.innerHTML='Sem ' + nome;
+                        }
+                    } ;
+                    this.listarTodos = function(){
+                        //gera String em formato tabela
+                        var dados = '';
+                        for (i=0;i<this.usuarios.length;i++){
+                            dados += "<tr>"
+                            dados += "<td>"+this.usuarios[i]+"</td>"
+                            dados += "<td><button onclick="app.excluir('+i+')""
+                            "</tr>";
+                        }
+                        //atualiza contador
+                        this.contar(this.usuarios.length);
+                        //atualizar DOM
+                        this.elUsuarios.innerHTML= dados;
+                    };
+                
+                    this.excluir = function(item){
+                        this.usuarios.splice(item,1);
+                        this.listarTodos();
+                    }
+
+                    this.adicionar = function(){
+                        //acessando campo com nome do Usuario
+                        var elNome = document.getElementById("add-nome");
+                        var usuario = elNome.value;
+                        if(usuario){
+                            this.usuarios.push(usuario);
+                            this.listarTodos();
+                        }
+                    }
+
+                    this.editar = function(){
+                        var nome = this.usuarios[item];
+                        var elNome
+                    }
+
+                };
+            app.listarTodos();
+
+        </script>
+
+
+</html>

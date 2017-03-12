@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+
+        <script>
+
+            var vetor = new Array();
+            var maior = 0;
+
+            function add(){
+                
+                var n = Number(document.getElementById("n").value);
+
+                vetor.push(n);
+                mostrar(n);
+
+            }
+
+            function mostrar(n){
+                var saida = document.getElementById("valorvetor")
+
+                saida.innerText = saida.innerText + ", "+n;
+
+            }
+            
+
+            function mostrarMaior(){
+
+                maior = vetor[0];
+                for(i = 1; i < vetor.length; i++){
+                    if(vetor[i] > maior){
+                       maior = vetor[i];
+                    }
+                }
+
+                var saidamaior = document.getElementById("saidamaior");
+                saidamaior.innerText = maior;
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <label>Number</label>
+        <input type="number" value="" id="n">
+        <input type="button" value="Insert in" onclick="add()">
+        <input type="button" value="Max value " onclick="mostrarMaior()">
+        <br>
+        <label id="valorvetor">Result</label>
+        <span id="saidamaior"></span>
+
+    </body>
+
+</html>

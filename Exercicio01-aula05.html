@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+
+        <script>
+
+            function maiorNumero(){
+
+                var val01 = Number (document.getElementById('numero01').value);
+                var val02 = Number (document.getElementById('numero02').value);
+                var val03 = Number (document.getElementById('numero03').value);
+                var resultado = (document.getElementById('resultado'));
+                var maior;
+
+                if(val01 > val02 && val01 > val03){
+                    maior = val01;
+                }else if(val02 > val01 && val02 > val03){
+                    maior = val02;
+                }else{
+                    maior = val03;
+                }
+
+                resultado.innerText = maior;
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id = "resultado">
+
+            Informe os tres numeros
+
+        </div>
+
+        <input type="number" value="" id="numero01">
+        <input type="number" value="" id="numero02">
+        <input type="number" value="" id="numero03">
+        <input type="button" value="Maior" onclick="maiorNumero()"
+
+    </body>
+</html>

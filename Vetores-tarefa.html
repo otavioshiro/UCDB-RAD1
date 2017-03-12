@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+            <script>
+
+                    function inserindoValor(){
+                          
+                        var array = new Array();
+                        var entrada = Number(document.getElementById("numero").value);
+
+                            numberMax.innerHTML= "<b>"+entrada+"</b>";
+
+                    }
+                    
+                    for(i=0; i<10; i++){
+                        array.push("10");
+                    }
+
+                    function maioNumero(){
+                        for(i=0; i<10; i++){
+                            if (array[i]>array[i+1]){
+                                array[10] = array[i];
+                            }
+                            else{
+                                for (i=0; i<10;i++){
+                                    console.log(array[i]);
+                                }
+                            }
+                        }
+                    }
+
+            </script>
+    </head>
+
+    <body>
+
+            <label>Max value</label>
+
+            <div id="resultado"> </div>
+            <input type="number" value="" id="numero">
+            <input type="button" value="Insert in" onclick="inserindoValor()"/>
+            <input type="button" value="MAX equals" onclick="maioNumero()"/>
+
+    </body>
+</html>

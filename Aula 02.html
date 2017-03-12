@@ -1,0 +1,26 @@
+<html>
+
+    <head>
+
+        <script>
+            function imprimirMensagem(){
+                var area = document.getElementById('areaDaMensagem');
+                var mensagem = document.getElementById('txtMensagem');
+
+                area.innerText = "Ola "+ mensagem.value;
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id = "areaDaMensagem">
+            oi
+        </div>
+
+        <input type="text" value="" id="txtMensagem">
+        <input type="button" value="OK" onclick="imprimirMensagem()"
+
+    </body>
+</html>
